@@ -375,7 +375,7 @@ class HaPanelBaiduMap extends HTMLElement {
         return new Promise((resolve, reject) => {
             var points = [new BMap.Point(longitude, latitude)]
             var convertor = new BMap.Convertor();
-            convertor.translate(points, 1, 5, function (data) {
+            convertor.translate(points, 3, 5, function (data) {
                 if (data.status === 0) {
                     resolve(data.points)
                 }
